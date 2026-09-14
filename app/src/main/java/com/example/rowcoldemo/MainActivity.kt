@@ -36,18 +36,11 @@ class MainActivity : ComponentActivity() {
 }
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Row(modifier) {
+    Column(modifier) {
         TextCell("1")
         TextCell("2")
         TextCell("3")
     }
-}
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
 }
 @Composable
 fun TextCell(text: String, modifier: Modifier = Modifier) {
