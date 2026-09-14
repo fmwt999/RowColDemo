@@ -19,7 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.Alignment
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,12 +36,13 @@ class MainActivity : ComponentActivity() {
 }
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Column(horizontalAlignment = Alignment.End,
-        modifier = modifier.width(250.dp)) {
+    Row(horizontalArrangement = Arrangement.End,
+        modifier = modifier.size(width = 400.dp, height = 200.dp)) {
         TextCell("1")
         TextCell("2")
         TextCell("3")
     }
+
 }
 @Composable
 fun TextCell(text: String, modifier: Modifier = Modifier) {
